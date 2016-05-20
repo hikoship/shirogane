@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{ partial "head.html" . }}
+        <title></title>
+    </head>
+    <body>
+    <div class="container">
+        {{ partial "header.html" . }}
+        {{$page := index .Data.Pages 0 }}
+        <header class="meta">
+        <h1 align="center">{{ $page.Params.collection }}</h1>
+        </header>
+        <main>
+            <table align="center" class="collection" border="1">
+                {{ if in $page.Params.collection "Books" }}
+                    <tr>
+                        <th>Year</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Translator</th>
+                        <th>Rating</th>
+                        <th>Review</th>
+                    </tr>
+
+                    {{ range .Data.Pages}}
+                        <tr>
+                            <td>{{ .Date.Format "2006" }}</td>
+                            <td><a href="{{ .Params.link }}">{{ .Params.name }}</a></td>
+                            <td>{{ .Params.author }}</td>
+                            <td>{{ .Params.translator }}</td>
+                            <td>
+                                {{ range seq 1 .Params.rate }}✭{{ end }}
+                            </td>
+                            <td><a href="{{ .Permalink }}">Here</a></td>
+                        </tr>
+                    {{ end }}
+                    <!-- Other books -->
+                        <tr>
+                            <td><a href="#">2015</a></td>
+                            <td>基地</td>
+                            <td>Isaac Asimov</td>
+                            <td>叶李华</td>
+                            <td>✭✭✭</td>
+                            <td>极致的宏大与颓废</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">2015</a></td>
+                            <td>基地与帝国</td>
+                            <td>Isaac Asimov</td>
+                            <td>叶李华</td>
+                            <td>✭✭✭✭</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">2015</a></td>
+                            <td>第二基地</td>
+                            <td>Isaac Asimov</td>
+                            <td>叶李华</td>
+                            <td>✭✭✭✭</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">2015</a></td>
+                            <td>基地前奏</td>
+                            <td>Isaac Asimov</td>
+                            <td>叶李华</td>
+                            <td>✭✭✭✭✭</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">2015</a></td>
+                            <td>迈向基地</td>
+                            <td>Isaac Asimov</td>
+                            <td>叶李华</td>
+                            <td>✭✭✭</td>
+                            <td>叶李华老师神奇翻译</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">2015</a></td>
+                            <td>基地边缘</td>
+                            <td>Isaac Asimov</td>
+                            <td>叶李华</td>
+                            <td>✭✭✭✭</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">2015</a></td>
+                            <td>基地与地球</td>
+                            <td>Isaac Asimov</td>
+                            <td>叶李华</td>
+                            <td>✭✭✭✭</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">2016</a></td>
+                            <td>我，机器人</td>
+                            <td>Isaac Asimov</td>
+                            <td>叶李华</td>
+                            <td>✭✭✭✭✭</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">2016</a></td>
+                            <td>钢穴</td>
+                            <td>Isaac Asimov</td>
+                            <td>叶李华</td>
+                            <td>✭✭✭✭</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">2016</a></td>
+                            <td>裸阳</td>
+                            <td>Isaac Asimov</td>
+                            <td>叶李华</td>
+                            <td>✭✭✭✭</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">2016</a></td>
+                            <td>曙光中的机器人</td>
+                            <td>Isaac Asimov</td>
+                            <td>叶李华</td>
+                            <td>✭✭✭✭</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">2016</a></td>
+                            <td>机器人与帝国</td>
+                            <td>Isaac Asimov</td>
+                            <td>叶李华</td>
+                            <td>✭✭✭✭✭</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">2016</a></td>
+                            <td>海伯利安</td>
+                            <td>Dan Simmons</td>
+                            <td>潘振华 / 官善明 / 李懿</td>
+                            <td>✭✭✭</td>
+                            <td>我自己的评价体系比豆瓣普遍是要低的，很多九分以上、我自己也很喜欢的书，被我打到四星，因为我觉得五星不该太泛滥。 这次海伯利安只给了三星，因为比 较想看情节，而这本书的描写有些太多了，有点偏离预期。 作者能够写出六个不同领域的 故事非常厉害，对于各个世界的描写是一场视听盛宴。但是彼此情节关联性比较低，没有一气呵成读下去的欲望。另外我自己没有宗教和西方文学的背景知识储备，有些地方感觉比较生疏。 最后的结局感觉很奇怪，并没有理解作者的意图。 希望后面能读到原版。</td>
+                        </tr>
+                        <!-- <tr>
+                            <td><a href="#">year</a></td>
+                            <td>name</td>
+                            <td>author</td>
+                            <td>translator</td>
+                            <td>&#10029✭</td>
+                            <td>review</td>
+                        </tr> -->
+                {{ end }}
+
+                {{ if in $page.Params.collection "OJ Problems" }}
+                    <tr>
+                        <th>Marked</th>
+                        <th>#</th>
+                        <th>Title</th>
+                    </tr>
+                    {{ range .Data.Pages}}
+                        <tr>
+                            <td>
+                                {{ if eq .Params.marked "1" }}✭{{ end }}
+                            </td>
+                            <td>{{ .Params.number }}</td>
+                            <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>
+                        </tr>
+                    {{ end }}
+                {{ end }}
+            </table>
+        </main>
+        {{ partial "footer.html" . }}
+    </div>
+    </body>
+</html>

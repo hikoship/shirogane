@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{ partial "head.html" . }}
+        <title></title>
+    </head>
+    <body>
+    <div class="container">
+        {{ partial "header.html" . }}
+        <main>
+            <ul>
+                {{ range .Data.Terms.ByCount }}
+                <li id="{{ .Name | urlize }}">{{ .Name }} ({{ len .Pages }})</li>
+                    <ul>
+                        {{ range where .Pages "Section" "==" "post"}}
+                        <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+                        {{ end }}
+                    </ul>
+                {{ end }}
+            </ul>
+        </main>
+        {{ partial "footer.html" . }}
+    </div>
+    </body>
+</html>
