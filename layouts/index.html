@@ -16,7 +16,7 @@
                             <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006/01/02" }}</time>
                             {{ if .Params.categories }}
                             <span class="divider"> · </span>
-                            <span><a href="/categories#{{ .Params.categories | urlize }}">{{ .Params.categories }}</a></span>
+                            <span><a href="/categories/{{ .Params.categories | urlize }}">{{ .Params.categories }}</a></span>
                             {{ end }}
                         </div>
                         <div class="summary-content">
