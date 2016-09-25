@@ -1,31 +1,54 @@
-html, body {
-    height: 100%;
+/*skeleton*/
+html{
+    height: 100%; /* key value */
     font-weight: 300;
-    /*font-family: 'San Fransisco', 'PingFang SC', 'Helvetica Neue', Helvetica, 'Lantinghei SC', 'Hiragino Sans GB', sans-serif;*/
-    font-family: sans-serif;
+    font-family: 'San Fransisco', 'PingFang SC', 'Helvetica Neue', Helvetica, 'Lantinghei SC', 'Hiragino Sans GB', sans-serif;
     line-height: 1.75em;
     color: #333;
 }
 
-/*skeleton*/
-div.container {
-    width: 100%;
+body {
+    position: relative; /* key value */
+    margin: 0;
+    min-height: 100%; /* key value */
+}
+
+main {
+    width: 94%;
     max-width: 960px;
     margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
+    padding-bottom: 10em;
+}
+
+/* head */
+#top-bar {
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+}
+
+#img-title {
+    margin: 20px 0;
+    width: 96%;
+    max-width: 720px;
 }
 
 header.nav {
     margin-bottom: 40px;
 }
 
-main {
-    width: 100%;
-    max-width: 720px;
-    margin: 0 auto;
+/*foot*/
+footer {
+    position: absolute; /* key value */
+    background-color: #333;
+    color: #ccc;
+    padding: 10px 0;
+	width:100%;
+    bottom: 0px; /* key value */
+    height: 7em;
 }
 
+/*content*/
 article, div.summary {
     width: 100%;
     max-width: 600px;
@@ -34,15 +57,6 @@ article, div.summary {
 
 div.content {
     font-size: 12pt;
-}
-
-/*apple4.us*/
-footer {
-	width:100%;
-	height:100px;
-	position:relative;
-	bottom:0;
-	left:0;
 }
 
 div.summary {
@@ -123,11 +137,7 @@ div.highlight span.lineno {
     height: auto;
 }
 
-#img-title {
-    padding: 20px 0;
-    width: 100%;
-    max-width: 720px;
-}
+
 
 /*link*/
 /*
@@ -220,4 +230,9 @@ div.content > hr:after {
 
 td, th{
     padding:0.1em 0.3em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
 }
