@@ -2,7 +2,7 @@
 html{
     height: 100%; /* key value */
     font-weight: 300;
-    font-family: 'San Fransisco', 'PingFang SC', 'Helvetica Neue', Helvetica, 'Lantinghei SC', 'Hiragino Sans GB', sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, 'Lantinghei SC', 'Hiragino Sans GB', sans-serif;
     line-height: 1.75em;
     color: #333;
 }
@@ -131,11 +131,13 @@ div.highlight span.lineno {
 }
 
 /*img*/
-
-.img-responsive {
-    width: 100%;
+main article img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
     height: auto;
 }
+
 
 
 
