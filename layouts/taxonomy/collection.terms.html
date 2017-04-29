@@ -10,12 +10,10 @@
         <main>
             <h3>{{ .Title }}</h3>
             <ul>
-                {{ $data := .Data }}
-                {{ range $key, $value := .Data.Terms }}
-                    <li><a href="{{ $key | urlize }}">{{ $key }}</a></li>
-                {{ end }}
-                <li><a href="games">Game Reviews</a></li>
+                <li><a href="books">Book Reviews</a></li>
                 <li><a href="anime">Anime Reviews</a></li>
+                <li><a href="movies">Movie Reviews</a></li>
+                <li><a href="games">Game Reviews</a></li>
            </ul>
        </main>
     </div>
